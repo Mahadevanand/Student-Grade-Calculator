@@ -1,6 +1,6 @@
-# 🎓 Student Management System
+# 🎓 Student-Grade-Calculator
 
-A simple **Python-based Student Management System** that allows users to add, view, search, delete students, and calculate student results and class statistics.
+A simple **Python-based Student-Grade-Calculator** that allows users to add, view, search, delete students, and calculate student results and class statistics.
 
 This project is designed to practice **Python functions, dictionaries, lists, loops, conditions, input validation, and basic data management**.
 
