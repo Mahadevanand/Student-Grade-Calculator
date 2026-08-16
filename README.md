@@ -1,94 +1,255 @@
-# 🎓 Student Grade Calculator (Python)
+# 🎓 Student Management System
 
-A simple Python project that calculates a student's **total marks**, **average marks**, and **grade** based on marks entered for five subjects.
+A simple **Python-based Student Management System** that allows users to add, view, search, delete students, and calculate student results and class statistics.
 
-## 📌 Features
+This project is designed to practice **Python functions, dictionaries, lists, loops, conditions, input validation, and basic data management**.
 
-- Enter student name
-- Input marks for 5 subjects
-- Calculate total marks
-- Calculate average marks
-- Display grade based on average
-- Calculate results for multiple students
+## 🚀 Features
+
+* ➕ Add a new student
+* 📋 View all students
+* 🔍 Search student by Roll Number
+* 🗑️ Delete a student
+* 📊 Calculate class statistics
+* 🧮 Calculate total marks
+* 📈 Calculate average marks
+* 📌 Calculate percentage
+* 🏆 Automatically assign grades
+* ✅ Check PASS/FAIL status
+* ⚠️ Validate marks between 0 and 100
+* 🚫 Prevent duplicate Roll Numbers
+* ❌ Handle invalid input
 
 ## 📚 Subjects
 
-- English
-- Maths
-- Science
-- Social
-- Computer
+The system accepts marks for five subjects:
 
-## 🏆 Grade System
+* English
+* Maths
+* Science
+* Social
+* Computer
 
-| Average Marks | Grade |
-|--------------|-------|
-| 90 - 100 | A+ |
-| 80 - 89 | A |
-| 70 - 79 | B |
-| 60 - 69 | C |
-| 50 - 59 | D |
-| Below 50 | Fail |
+Each subject has a maximum of **100 marks**.
 
-## 🖥️ How to Run
+**Maximum Total = 500 marks**
 
-1. Make sure Python 3 is installed.
-2. Save the code as `student_grade_calculator.py`.
-3. Open a terminal or command prompt.
-4. Run the program:
+## 🏆 Grading System
 
-```bash
-python student_grade_calculator.py
-```
+|  Average | Grade |
+| -------: | :---- |
+|   90–100 | A+    |
+|    80–89 | A     |
+|    70–79 | B     |
+|    60–69 | C     |
+|    50–59 | D     |
+| Below 50 | F     |
 
-## 💻 Example Output
+### Pass/Fail Rule
 
-```
-Enter Student Name: Mahadev
-English: 85
-Maths: 90
-Science: 88
-Social: 80
-Computer: 95
+A student must score at least **35 marks in every subject** to pass.
 
-______ RESULTS _______
+If the student scores below 35 in even one subject:
 
-Student Name : Mahadev
-Total marks : 438
-Average marks : 87.6
-Grade : A
+**Result = FAIL**
 
-Calculator another student? (yes/no): no
-```
+Otherwise:
 
-## 📂 Project Structure
-
-```
-Student-Grade-Calculator/
-│── student_grade_calculator.py
-└── README.md
-```
+**Result = PASS**
 
 ## 🛠️ Technologies Used
 
-- Python 3
-- Functions
-- Conditional Statements
-- While Loop
-- User Input
+* **Python 3**
+* Lists
+* Dictionaries
+* Functions
+* `for` loops
+* `while` loops
+* `if-elif-else`
+* Exception handling
+* Input validation
+* `sum()`
+* `max()`
+* `min()`
 
-## 🚀 Future Improvements
+## 📂 Project Structure
 
-- Add input validation (marks between 0 and 100)
-- Save student records to a file (JSON or CSV)
-- Display highest and lowest marks
-- Add percentage calculation
-- Create a graphical user interface (GUI)
+```text
+Student-Management-System/
+│
+├── student_management.py
+└── README.md
+```
+
+## ▶️ How to Run
+
+### 1. Install Python
+
+Make sure Python 3 is installed on your computer.
+
+Check your Python version:
+
+```bash
+python --version
+```
+
+### 2. Clone the Repository
+
+```bash
+git clone YOUR_GITHUB_REPOSITORY_URL
+```
+
+### 3. Open the Project Folder
+
+```bash
+cd Student-Management-System
+```
+
+### 4. Run the Program
+
+```bash
+python student_management.py
+```
+
+## 🖥️ Main Menu
+
+```text
+===================================
+      Student Management System
+===================================
+
+1. ADD Student
+2. View All Students
+3. Search Student
+4. Delete Student
+5. Class Statistics
+6. Exit
+
+Enter your choice:
+```
+
+## 📝 Example
+
+When adding a student:
+
+```text
+========== ADD STUDENT ==========
+
+Enter Roll No: 101
+Enter Student Name: Mahadevanand
+
+Enter English marks (0-100): 85
+Enter Maths marks (0-100): 90
+Enter Science marks (0-100): 78
+Enter Social marks (0-100): 88
+Enter Computer marks (0-100): 95
+
+✅ Student added successfully!
+```
+
+The system calculates:
+
+```text
+Total      : 436 / 500
+Average    : 87.2
+Percentage : 87.2 %
+Grade      : A
+Result     : PASS
+```
+
+## 📊 Class Statistics
+
+The Class Statistics option displays:
+
+* Total number of students
+* Number of passed students
+* Number of failed students
+* Highest total marks
+* Lowest total marks
+
+## 🧠 Python Concepts Practiced
+
+This project is useful for practicing the following concepts:
+
+### 1. Functions
+
+The program is divided into functions such as:
+
+```python
+def add_student():
+def view_students():
+def search_student():
+def delete_student():
+def class_statistics():
+```
+
+### 2. Lists
+
+A list stores all student records:
+
+```python
+students = []
+```
+
+### 3. Dictionaries
+
+Each student is stored as a dictionary:
+
+```python
+student = {
+    "roll_no": roll_no,
+    "name": name,
+    "marks": marks,
+    "total": total,
+    "average": average,
+    "percentage": percentage,
+    "grade": student_grade,
+    "result": result
+}
+```
+
+### 4. Loops
+
+`for` and `while` loops are used for processing students, subjects, and menu operations.
+
+### 5. Conditional Statements
+
+`if`, `elif`, and `else` are used for grading, validation, and menu selection.
+
+### 6. Exception Handling
+
+`try-except` is used to handle invalid mark input:
+
+```python
+try:
+    mark = int(input(...))
+except ValueError:
+    print("Please enter numbers only.")
+```
+
+## 🔮 Future Improvements
+
+Possible improvements for this project:
+
+* 💾 Save student data to a file
+* 📂 Load student data when the program starts
+* ✏️ Update student details
+* 🔐 Add login/authentication
+* 🖥️ Create a GUI using Tkinter
+* 🗄️ Use SQLite/MySQL database
+* 📊 Add graphical statistics
+* 🔎 Search students by name
+* 🏅 Display the class topper
+* 📄 Generate student report cards
+
+## 🎯 Project Purpose
+
+The main purpose of this project is to build a **beginner-friendly Python application** while practicing real-world programming concepts such as functions, data structures, validation, and CRUD-style operations.
 
 ## 👨‍💻 Author
 
-**Mahadev**
+**Mahadevanand**
 
----
+## ⭐ Support
 
-⭐ If you found this project useful, consider giving it a star on GitHub!
+If you find this project useful, consider giving the repository a ⭐ on GitHub!
